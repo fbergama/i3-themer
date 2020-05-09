@@ -2,6 +2,8 @@
 declare -A xresources
 declare -A i3wm
 declare -A polybar
+declare -A dunst
+
 
 xresources['background']='#1d1f21'
 xresources['foreground']='#c5c8c6'
@@ -56,5 +58,9 @@ polybar['format-connected-foreground']='#1d1f21'
 polybar['format-connected-background']='#81a2be'
 polybar['format-connected-prefix-foreground']='#1d1f21'
 polybar['ramp-signal-foreground']='#1d1f21'
+
+dunst['background']='#1d1f21'
+dunst['foreground']='#d99f57'
+dunst['frame_color']='#d99f57'
 
 wallpaper='000.png'
