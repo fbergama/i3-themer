@@ -47,11 +47,14 @@ function createConfigFiles(){
     mkdir -p $HOME/.config/i3
     mkdir -p $HOME/.config/polybar
     mkdir -p $HOME/.config/nitrogen
+    mkdir -p $HOME/.config/dunst
     touch $HOME/.Xresources
     touch $HOME/.config/i3/config
     touch $HOME/.config/polybar/config
     touch $HOME/.config/nitrogen/bg-saved.cfg
+    touch $HOME/.config/dunst/dunstrc
 }
+
 while [ 0 ]; do
     if [[ ! $# -gt 0 ]] ; then
         helpText
@@ -59,7 +62,7 @@ while [ 0 ]; do
         helpText
     elif [ "$1" = "-a" -o "$1" = "--apply" -o "$1" = "apply" ] ; then
         shift 1
-        THEME=$1
+        CHOSEN_THEME="$PWD/themes/$1"
     elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
         restoreDefaults
     else
@@ -67,8 +70,7 @@ while [ 0 ]; do
     fi
 done
 
-CHOSEN_THEME="$PWD/themes/$THEME.sh"
-if [ ! -f $THEME_FILE ] ; then
+if [ ! -f $CHOSEN_THEME ] ; then
     missingTheme
 else
     source $CHOSEN_THEME

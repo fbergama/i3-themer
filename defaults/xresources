@@ -1,5 +1,5 @@
 #!/bin/bash
-function xresourcesTemplate(){
+function xresourcesConfig(){
 cat << XRESOURCES
 *background:                      ${xresources['background']}
 *foreground:                      ${xresources['foreground']}

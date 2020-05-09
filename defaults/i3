@@ -1,5 +1,5 @@
 #!/bin/bash
-function i3Template(){
+function i3Config(){
 local mod='$mod'
 local ws1='$ws1'
 local ws2='$ws2'

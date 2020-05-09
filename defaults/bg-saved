@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function nitrogenTemplate(){
+function nitrogenConfig(){
     cat << EOF
 [xin_-1]
 file=$HOME/.config/nitrogen/$wallpaper
