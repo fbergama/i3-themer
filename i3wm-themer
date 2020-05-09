@@ -1,0 +1,77 @@
+#!/bin/bash
+function helpText() {
+    cat << HELP
+I3WM-THEMER, a non-interactive program to apply themes on i3 window manager.
+
+Usage:
+    ./$(basename "$0") [OPTION]
+
+Example:
+    ./$(basename "$0") -a 00
+
+Options:
+  -h, --help                (Display this help message)
+  -a, --apply THEME_ID      (Apply the theme with given id)
+  -r, --restore             (Restore to distribution default configs)
+
+Available themes:
+$(listThemes)
+
+Check /themes/screenshots to see how the themes look like and
+send bugs and questions to <https://github.com/cizordj/i3wm-themer>
+HELP
+exit 0
+}
+function listThemes(){
+    cd themes
+    for file in *.sh ; do
+        echo $file
+    done
+    cd $OLDPWD
+}
+function restoreDefaults(){
+    echo "Resetting all configuration files to default"
+    exit 0
+}
+function missingTheme(){
+    cat << EOF
+The theme you chose doesn't exist on themes directory
+
+The available themes are:
+$(listThemes)
+EOF
+    exit 1
+}
+function createConfigFiles(){
+    mkdir -p $HOME/.config
+    mkdir -p $HOME/.config/i3
+    mkdir -p $HOME/.config/polybar
+    mkdir -p $HOME/.config/nitrogen
+    touch $HOME/.Xresources
+    touch $HOME/.config/i3/config
+    touch $HOME/.config/polybar/config
+    touch $HOME/.config/nitrogen/bg-saved.cfg
+}
+while [ 0 ]; do
+    if [[ ! $# -gt 0 ]] ; then
+        helpText
+    elif [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "help" ] ; then
+        helpText
+    elif [ "$1" = "-a" -o "$1" = "--apply" -o "$1" = "apply" ] ; then
+        shift 1
+        THEME=$1
+    elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
+        restoreDefaults
+    else
+        break
+    fi
+done
+
+CHOSEN_THEME="$PWD/themes/$THEME.sh"
+if [ ! -f $THEME_FILE ] ; then
+    missingTheme
+else
+    source $CHOSEN_THEME
+fi
+
+createConfigFiles
