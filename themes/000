@@ -2,8 +2,7 @@
 declare -A xresources
 declare -A i3wm
 declare -A polybar
-declare -A dunst
-
+declare -A dunstrc
 
 xresources['background']='#1d1f21'
 xresources['foreground']='#c5c8c6'
