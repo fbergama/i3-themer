@@ -1,20 +1,25 @@
 #!/bin/bash
+declare -A CONFIG_PATH
+test ! $# -gt 0
+THERE_IS_NO_ARGUMENT=$?
+XDG_CONFIG_HOME="$HOME/.config"
+
 function helpText() {
     cat << HELP
 I3WM-THEMER, a non-interactive program to apply themes on i3 window manager.
 
 Usage:
-    ./$(basename "$0") [OPTION]
+    ./$(basename "$0") -a [THEME_ID] [OPTIONS]
 
 Example:
-    ./$(basename "$0") -a 00
+    ./$(basename "$0") -a 000
 
 Options:
-  -h, --help                (Display this help message)
-  -a, --apply THEME_ID      (Apply the theme with given id)
-  -r, --restore             (Restore to distribution default configs)
+  -h, --help                Display this help message
+  -a, --apply THEME_ID      Apply the theme with given id
+  -r, --restore             Restore to distribution default configs
+  -o, --output              Custom directory to save the files
 
-Available themes:
 $(listThemes)
 
 Check /themes/screenshots to see how the themes look like and
@@ -23,57 +28,85 @@ HELP
 exit 0
 }
 function listThemes(){
-    cd themes
-    for file in *.sh ; do
-        echo $file
-    done
+    echo "Available themes:"
+    ls themes/ | grep -v ".json" | grep -v ".md" | grep -v "screenshots"
     cd $OLDPWD
 }
 function restoreDefaults(){
-    echo "Resetting all configuration files to default"
+    echo "Function not implemented"
     exit 0
 }
 function missingTheme(){
     cat << EOF
-The theme you chose doesn't exist on themes directory
+The theme you chose does not exist in the themes' directory
 
-The available themes are:
 $(listThemes)
 EOF
     exit 1
 }
-function createConfigFiles(){
-    mkdir -p $HOME/.config
-    mkdir -p $HOME/.config/i3
-    mkdir -p $HOME/.config/polybar
-    mkdir -p $HOME/.config/nitrogen
-    mkdir -p $HOME/.config/dunst
-    touch $HOME/.Xresources
-    touch $HOME/.config/i3/config
-    touch $HOME/.config/polybar/config
-    touch $HOME/.config/nitrogen/bg-saved.cfg
-    touch $HOME/.config/dunst/dunstrc
+function touchConfigFiles(){
+    mkdir -p $XDG_CONFIG_HOME
+    mkdir -p $XDG_CONFIG_HOME/i3
+    mkdir -p $XDG_CONFIG_HOME/polybar
+    mkdir -p $XDG_CONFIG_HOME/nitrogen
+    mkdir -p $XDG_CONFIG_HOME/dunst
+    touch ${CONFIG_PATH['i3']}
+    touch ${CONFIG_PATH['dunst']}
+    touch ${CONFIG_PATH['nitrogen']}
+    touch ${CONFIG_PATH['polybar']}
+    touch ${CONFIG_PATH['xresources']}
 }
 
+function copyWallpapers(){
+    cp -u wallpapers/* -t $XDG_CONFIG_HOME/nitrogen/
+}
+function copyPolybarLauncher(){
+    cp -u scripts/i3wmthemer_bar_launch.sh -t $XDG_CONFIG_HOME/polybar/
+}
 while [ 0 ]; do
-    if [[ ! $# -gt 0 ]] ; then
+    if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
         helpText
     elif [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "help" ] ; then
         helpText
     elif [ "$1" = "-a" -o "$1" = "--apply" -o "$1" = "apply" ] ; then
         shift 1
         CHOSEN_THEME="$PWD/themes/$1"
+    elif [ "$1" = "-o" -o "$1" = "--output" -o "$1" = "output" ] ; then
+        shift 1
+        mkdir -p $1
+        cd $1
+        XDG_CONFIG_HOME=`pwd`
+        cd $OLDPWD
     elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
         restoreDefaults
+    elif [ "$1" = "-l" -o "$1" = "--list" -o "$1" = "list" ] ; then
+        listThemes
+        exit
     else
         break
     fi
+    shift 1
 done
-
+CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
+CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
+CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
+CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
+CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/.Xresources"
 if [ ! -f $CHOSEN_THEME ] ; then
     missingTheme
 else
     source $CHOSEN_THEME
 fi
 
-createConfigFiles
+touchConfigFiles
+copyWallpapers
+copyPolybarLauncher
+for file in defaults/* ; do
+    source $file
+done
+
+dunstConfig > ${CONFIG_PATH['dunst']}
+i3config > ${CONFIG_PATH['i3']}
+nitrogenConfig > ${CONFIG_PATH['nitrogen']}
+polybarConfig > ${CONFIG_PATH['polybar']}
+xresourcesConfig > ${CONFIG_PATH['xresources']}
