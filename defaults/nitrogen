@@ -3,7 +3,7 @@
 function nitrogenConfig(){
     cat << EOF
 [xin_-1]
-file=$HOME/.config/nitrogen/$wallpaper
+file=$XDG_CONFIG_HOME/nitrogen/$wallpaper
 mode=5
 bgcolor=#000000
 EOF
