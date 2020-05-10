@@ -64,9 +64,11 @@ function copyPolybarLauncher(){
     cp -u scripts/i3wmthemer_bar_launch.sh -t $XDG_CONFIG_HOME/polybar/
 }
 function restartApps(){
-    i3 restart
     pkill dunst
     nitrogen --restore
+    xrdb ${CONFIG_PATH['xresources']}
+    i3-msg restart
+    notify-send "Theme applied successfully!"
 }
 while [ 0 ]; do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
@@ -96,7 +98,7 @@ CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
 CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
 CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
-CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/.Xresources"
+CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
 if [ ! -f $CHOSEN_THEME ] ; then
     missingTheme
 else
@@ -115,5 +117,4 @@ i3config > ${CONFIG_PATH['i3']}
 nitrogenConfig > ${CONFIG_PATH['nitrogen']}
 polybarConfig > ${CONFIG_PATH['polybar']}
 xresourcesConfig > ${CONFIG_PATH['xresources']}
-
-restartApps
+restartApps 2&> /dev/null
