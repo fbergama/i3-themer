@@ -21,7 +21,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <h1>What you will need</h1>
 <ul>
-<li>Bash</li>
+<li>GNU Bash v4 or later</li>
 <li><a href="https://github.com/Airblader/i3">i3-gaps</a></li>
 <li><a href="https://github.com/jaagr/polybar">Polybar</a></li>
 <li><a href="https://github.com/DaveDavenport/rofi">Rofi</a></li>
@@ -36,19 +36,6 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <h2>Using the script</h2>
 <ul>
-~~Install all the requirements from the 'What you will need' section.
-Either manually or use one of the scripts created for some distros:
-
-    # For Arch, ArchLabs or Manjaro Linux
-    ./install_arch.sh
-
-    # For Debian
-    ./install_debian.sh
-
-    # For Ubuntu
-    ./install_ubuntu.sh
-
-If you are not on one of the above, install them using your Package manager.~~
 
 Clone this repository and run the script
 
@@ -57,7 +44,7 @@ Clone this repository and run the script
     chmod +x i3wm-themer
     ./i3wm-themer
 
-The first time you run the script it will you show the help text and the available
+The first time you run the script it will show you the help text and the available
 themes altogether with the possible command line options.
 
 To list the available themes type
@@ -85,6 +72,7 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 
 <h2>About this fork</h2>
 <ul>
-This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a>.
+This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from
+@unix121.
 The biggest difference between the two forks is that in mine the code was completely rewritten in BASH.
 </ul>
