@@ -81,3 +81,8 @@ The biggest difference between the two forks is that in mine the code was comple
     
 Also in this fork the dunst notification manager will be colorized too.
 </ul>
+<h2>Contributing</h2>
+<ul>
+If you are interested in contributing with new themes
+click <a href="https://github.com/cizordj/i3wm-themer/tree/master/templates">here</a>
+</ul>

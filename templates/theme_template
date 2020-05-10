@@ -1,0 +1,65 @@
+#!/bin/bash
+declare -A xresources
+declare -A i3wm
+declare -A polybar
+declare -A dunstrc
+
+xresources['background']=''
+xresources['foreground']=''
+xresources['cursorcolor']=''
+xresources['color0']=''
+xresources['color1']=''
+xresources['color2']=''
+xresources['color3']=''
+xresources['color4']=''
+xresources['color5']=''
+xresources['color6']=''
+xresources['color7']=''
+xresources['color8']=''
+xresources['color9']=''
+xresources['color10']=''
+xresources['color11']=''
+xresources['color12']=''
+xresources['color13']=''
+xresources['color14']=''
+xresources['color15']=''
+xresources['rofi.color-window']=''
+xresources['rofi.color-normal']=''
+xresources['rofi.color-active']=''
+xresources['rofi.color-urgent']=''
+
+i3wm['client.background']=''
+i3wm['client.focused']=''
+i3wm['client.unfocused']=''
+i3wm['client.focused_inactive']=''
+i3wm['client.urgent']=''
+i3wm['client.placeholder']=''
+
+polybar['background']=''
+polybar['foreground']=''
+polybar['modules-left']='wlan eth'
+polybar['modules-center']='i3'
+polybar['modules-right']='date powermenu'
+polybar['label-unfocused-background']=''
+polybar['label-unfocused-foreground']=''
+polybar['label-mode-background']=''
+polybar['label-mode-foreground']=''
+polybar['label-focused-foreground']=''
+polybar['label-focused-background']=''
+polybar['label-visible-background']=''
+polybar['label-visible-foreground']=''
+polybar['format-foreground']=''
+polybar['format-background']=''
+polybar['label-open-foreground']=''
+polybar['label-close-foreground']=''
+polybar['label-separator-foreground']=''
+polybar['format-connected-foreground']=''
+polybar['format-connected-background']=''
+polybar['format-connected-prefix-foreground']=''
+polybar['ramp-signal-foreground']=''
+
+dunstrc['background']=${polybar['background']}
+dunstrc['foreground']=${polybar['foreground']}
+dunstrc['frame_color']=${polybar['foreground']}
+
+wallpaper='[wallpaper_name].png'
