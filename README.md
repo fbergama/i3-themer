@@ -52,7 +52,7 @@ To list the available themes type
     
     ./i3wm-themer -l
 
-To apply the desired theme
+To apply a desired theme
     
     ./i3wm-themer -a [THEME_ID]
 
@@ -75,8 +75,7 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 
 <h2>About this fork</h2>
 <ul>
-This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from
-@unix121.
+This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from <a href="https://github.com/unix121">@unix121</a>.
 The biggest difference between the two forks is that in mine the code was completely rewritten in BASH.
     
 Also in this fork the dunst notification manager will be colorized too.
