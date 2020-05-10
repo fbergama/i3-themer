@@ -63,6 +63,11 @@ function copyWallpapers(){
 function copyPolybarLauncher(){
     cp -u scripts/i3wmthemer_bar_launch.sh -t $XDG_CONFIG_HOME/polybar/
 }
+function restartApps(){
+    i3 restart
+    pkill dunst
+    nitrogen --restore
+}
 while [ 0 ]; do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
         helpText
@@ -110,3 +115,5 @@ i3config > ${CONFIG_PATH['i3']}
 nitrogenConfig > ${CONFIG_PATH['nitrogen']}
 polybarConfig > ${CONFIG_PATH['polybar']}
 xresourcesConfig > ${CONFIG_PATH['xresources']}
+
+restartApps
