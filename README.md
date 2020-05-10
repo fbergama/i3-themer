@@ -32,6 +32,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <li><a href="https://wiki.archlinux.org/index.php/Rxvt-unicode">rxvt-unicode</a></li>
 <li><a href="https://archlinux.org/packages/extra/x86_64/alsa-utils">alsa-utils</a></li>
 <li><a href="https://archlinux.org/packages/community/x86_64/mate-power-manager">mate-power-manager</a></li>
+    <li>Dunst</li>
 </ul>
 
 <h2>Using the script</h2>
@@ -77,4 +78,6 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from
 @unix121.
 The biggest difference between the two forks is that in mine the code was completely rewritten in BASH.
+    
+Also in this fork the dunst notification manager will be colorized too.
 </ul>
