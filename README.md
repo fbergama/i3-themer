@@ -48,12 +48,14 @@ The first time you run the script it will show you the help text and the availab
 themes altogether with the possible command line options.
 
 To list the available themes type
+    
     ./i3wm-themer -l
 
 To apply the desired theme
+    
     ./i3wm-themer -a [THEME_ID]
 
-And here we go, you have a BEATIFUL desktop! !!
+And here you go, you have a BEATIFUL desktop! !!
 </ul>
 
 <h2>Disclaimer</h2>
