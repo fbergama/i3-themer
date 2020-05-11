@@ -6,7 +6,7 @@
 # required in i3wm-themer and install them.
 #
 # - The i3-gaps Debian package will be downloaded and
-# and installed
+# installed
 #
 # - The other dependencies will be installed from the
 # standard apt-get repository
@@ -50,7 +50,7 @@ install:
 \tcp *.ttf -t /usr/share/fonts/truetype/source-code-pro" > Makefile
     echo "Monospaced font family for user interface and coding environments" > description-pak
  
-    checkinstall -D --pkgname "fonts-source-code-pro" --pkgversion "1.010" --pkgarch "any" --pkglicense "OFL-1.1" --pkgsource "https://github.com/adobe-fonts/source-code-pro" --maintainer "$USER@$HOSTNAME" --nodoc --install=no -y --pakdir "$LOCAL_PACKAGES_DIR" &> /dev/null
+    checkinstall -D --pkgname "fonts-source-code-pro" --pkgversion "1.010" --pkgarch "all" --pkglicense "OFL-1.1" --pkgsource "https://github.com/adobe-fonts/source-code-pro" --maintainer "$USER@$HOSTNAME" --nodoc --install=no -y --pakdir "$LOCAL_PACKAGES_DIR" &> /dev/null
     cd ../../
     rm -rf "release.zip" "source-code-pro-release"
 }
@@ -68,7 +68,7 @@ install:
 \tmkdir -p /usr/share/fonts/opentype/font-awesome-5
 \tcp *.otf -t /usr/share/fonts/opentype/font-awesome-5" > Makefile
 
-    checkinstall -D --pkgname "fonts-awesome-free-desktop" --pkgversion "5.13.0" --pkgarch "any" --pkglicense "OFL-1.1" --pkgsource "https://github.com/FortAwesome/Font-Awesome" --maintainer "$USER@$HOSTNAME" --nodoc --install=no -y --pakdir "$LOCAL_PACKAGES_DIR" &> /dev/null
+    checkinstall -D --pkgname "fonts-awesome-free-desktop" --pkgversion "5.13.0" --pkgarch "all" --pkglicense "OFL-1.1" --pkgsource "https://github.com/FortAwesome/Font-Awesome" --maintainer "$USER@$HOSTNAME" --nodoc --install=no -y --pakdir "$LOCAL_PACKAGES_DIR" &> /dev/null
     cd ../../
     rm -rf "fontawesome-desktop.zip" "fontawesome-free-5.13.0-desktop"
 }
