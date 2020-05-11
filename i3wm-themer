@@ -22,14 +22,14 @@ Options:
 
 $(listThemes)
 
-Check /themes/screenshots to see how the themes look like and
+Check /assets/screenshots to see how the themes look like and
 send bugs and questions to <https://github.com/cizordj/i3wm-themer>
 HELP
 exit 0
 }
 function listThemes(){
     echo "Available themes:"
-    ls themes/ | grep -v ".json" | grep -v ".md"
+    ls themes/ | grep -v ".md"
     cd $OLDPWD
 }
 function restoreDefaults(){
