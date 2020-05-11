@@ -6,7 +6,7 @@
 <ul>
 Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3wm</a>.
 
-![](workflow/workflow.gif?raw=true)
+![](assets/workflow/workflow.gif?raw=true)
 </ul>
 
 <h1>Why?</h1>
@@ -67,7 +67,7 @@ caution!
 <ul>
 Just take a look at the <a href="themes/">Theme collection</a> and pick the ones you like.
 
-![](workflow/themepreview.png?raw=true)
+![](assets/workflow/themepreview.png?raw=true)
 
 </ul>
 
@@ -81,5 +81,5 @@ Also in this fork the dunst notification manager will be colorized.
 <h2>Contributing</h2>
 <ul>
 If you are interested in contributing with new themes
-click <a href="https://github.com/cizordj/i3wm-themer/tree/master/templates">here</a>
+click <a href="https://github.com/cizordj/i3wm-themer/tree/master/assets/templates">here</a>
 </ul>
