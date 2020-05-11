@@ -21,24 +21,22 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <h1>What you will need</h1>
 <ul>
-<li>GNU Bash v4 or later</li>
-<li><a href="https://github.com/Airblader/i3">i3-gaps</a></li>
-<li><a href="https://github.com/jaagr/polybar">Polybar</a></li>
-<li><a href="https://github.com/DaveDavenport/rofi">Rofi</a></li>
-<li><a href="https://fontawesome.com">Font-Awesome-5</a></li>
-<li><a href="https://aur.archlinux.org/packages/nitrogen-git/">Nitrogen</a></li>
-<li><a href="https://aur.archlinux.org/packages/nerd-fonts-complete/">nerd-fonts-complete</a></li>
-<li><a href="https://github.com/adobe-fonts/source-code-pro">Adobe Source Code Pro font</a></li>
-<li><a href="https://wiki.archlinux.org/index.php/Rxvt-unicode">rxvt-unicode</a></li>
-<li><a href="https://archlinux.org/packages/extra/x86_64/alsa-utils">alsa-utils</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/mate-power-manager">mate-power-manager</a></li>
-    <li>Dunst</li>
+    <li><a href="https://packages.debian.org/sid/bash">Bash</a> v4 or later</li>
+    <li><a href="https://github.com/Airblader/i3">i3-gaps</a></li>
+    <li><a href="https://github.com/jaagr/polybar">Polybar</a></li>
+    <li><a href="https://github.com/DaveDavenport/rofi">Rofi</a></li>
+    <li><a href="https://fontawesome.com">Font-Awesome-5</a></li>
+    <li><a href="https://packages.debian.org/sid/x11/nitrogen">Nitrogen</a></li>
+    <li><a href="https://github.com/adobe-fonts/source-code-pro">Adobe Source Code Pro font</a></li>
+    <li><a href="https://packages.debian.org/sid/rxvt">rxvt-unicode</a></li>
+    <li><a href="https://packages.debian.org/sid/alsa-utils">alsa-utils</a></li>
+    <li><a href="https://packages.debian.org/sid/dunst">Dunst notification manager</a></li>
 </ul>
 
 <h2>Using the script</h2>
 <ul>
 
-Clone this repository and run the script
+Clone this repository and run the script:
 
     git clone https://github.com/cizordj/i3wm-themer.git
     cd i3wm-themer/
@@ -56,7 +54,7 @@ To apply a desired theme
     
     ./i3wm-themer -a [THEME_ID]
 
-And here you go, you have a BEATIFUL desktop! !!
+And here you go, you have a BEAUTIFUL desktop! !!
 </ul>
 
 <h2>Disclaimer</h2>
@@ -76,9 +74,9 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 <h2>About this fork</h2>
 <ul>
 This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from <a href="https://github.com/unix121">@unix121</a>.
-The biggest difference between the two forks is that in mine the code was completely rewritten in BASH.
+The biggest difference between the two forks is that in mine the code was completely rewritten in BASH and is more compatible with debian-like systems.
     
-Also in this fork the dunst notification manager will be colorized too.
+Also in this fork the dunst notification manager will be colorized.
 </ul>
 <h2>Contributing</h2>
 <ul>
