@@ -32,6 +32,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
     <li><a href="https://packages.debian.org/sid/alsa-utils">alsa-utils</a></li>
     <li><a href="https://packages.debian.org/sid/dunst">Dunst notification manager</a></li>
 </ul>
+<p>If you are a Debian user you can get the packages <a href="assets/setup/">here</a></p>
 
 <h2>Using the script</h2>
 <ul>
