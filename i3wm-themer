@@ -82,6 +82,7 @@ while [ 0 ]; do
         shift 1
         cd $1 || exit 1
         XDG_CONFIG_HOME=`pwd`
+        unset -f restartApps
         cd $OLDPWD
     elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
         restoreDefaults
@@ -98,7 +99,7 @@ CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
 CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
 CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
-if [[ $CHOSEN_THEME != $NULL && -f $CHOSEN_THEME ]] ; then
+if [[ -f "$CHOSEN_THEME" ]] ; then
     source $CHOSEN_THEME
 else
     missingTheme
