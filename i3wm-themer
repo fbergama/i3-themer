@@ -30,10 +30,9 @@ exit 0
 function listThemes(){
     echo "Available themes:"
     ls themes/ | grep -v ".md"
-    cd $OLDPWD
 }
 function restoreDefaults(){
-    echo "Function not implemented"
+    echo "Function still not implemented"
     exit 0
 }
 function missingTheme(){
@@ -70,6 +69,7 @@ function restartApps(){
     i3-msg restart
     notify-send "Theme applied successfully!"
 }
+
 while [ 0 ]; do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
         helpText
@@ -80,8 +80,7 @@ while [ 0 ]; do
         CHOSEN_THEME="$PWD/themes/$1"
     elif [ "$1" = "-o" -o "$1" = "--output" -o "$1" = "output" ] ; then
         shift 1
-        mkdir -p $1 || exit 1
-        cd $1
+        cd $1 || exit 1
         XDG_CONFIG_HOME=`pwd`
         cd $OLDPWD
     elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
@@ -99,10 +98,10 @@ CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
 CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
 CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
-if [ ! -f $CHOSEN_THEME ] ; then
-    missingTheme
-else
+if [[ $CHOSEN_THEME != $NULL && -f $CHOSEN_THEME ]] ; then
     source $CHOSEN_THEME
+else
+    missingTheme
 fi
 
 touchConfigFiles
