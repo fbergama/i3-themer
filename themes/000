@@ -58,8 +58,8 @@ polybar['format-connected-background']='#81a2be'
 polybar['format-connected-prefix-foreground']='#1d1f21'
 polybar['ramp-signal-foreground']='#1d1f21'
 
-dunstrc['background']='#1d1f21'
-dunstrc['foreground']='#c5c8c6'
-dunstrc['frame_color']='#c5c8c6'
+dunstrc['background']=${polybar['background']}
+dunstrc['foreground']=${polybar['format-background']}
+dunstrc['frame_color']=${polybar['format-background']}
 
 wallpaper='000.png'
