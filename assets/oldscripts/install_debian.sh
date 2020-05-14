@@ -1,4 +1,5 @@
 #!/bin/bash
+## WARNING! DO NOT USE THIS SCRIPT
 
 ### 20180515 Script written and fully commented by James Shane ( github.com/jamesshane )
 ### 20200209 Script refactored into functions by Caesar Campos ( github.com/cizordj )
