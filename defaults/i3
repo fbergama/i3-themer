@@ -149,6 +149,7 @@ for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
+for_window [class="(?i)gnome-calculator"] floating enable
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
@@ -164,6 +165,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)urxvt"] floating enable
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
@@ -224,10 +226,10 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -296,5 +298,14 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
+# User defined keys
+bindsym Print exec --no-startup-id i3-scrot -d
+bindsym Shift+Print exec --no-startup-id i3-scrot -s
+bindsym Alt+Print exec --no-startup-id i3-scrot -w
+bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e alsamixer
+bindsym $mod+F2 exec --no-startup-id sensible-browser
+bindsym $mod+F3 exec --no-startup-id nautilus
+bindsym $mod+F4 exec --no-startup-id gnome-calculator
+bindsym $mod+F5 exec --no-startup-id i3-sensible-terminal -e cmus
 EOF
 }

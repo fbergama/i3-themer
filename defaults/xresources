@@ -22,7 +22,7 @@ cat << XRESOURCES
 *color7:                          ${xresources['color7']}
 *color15:                         ${xresources['color15']}
 
-URxvt.font: xft:Source Code Pro:size=12
+URxvt.font: xft:Source Code Pro:size=13
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
