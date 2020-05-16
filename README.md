@@ -1,8 +1,8 @@
 <h1>i3wm-themer</h1> 
-
 ![](https://img.shields.io/codacy/grade/79aa404309114b25bdc87f00107a0b94/master)
 ![](https://img.shields.io/github/last-commit/cizordj/i3wm-themer/master)
 ![](https://img.shields.io/github/license/cizordj/i3wm-themer)
+![](https://img.shields.io/github/languages/top/cizordj/i3wm-themer?label=bash)
 <ul>
 Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3wm</a>.
 
