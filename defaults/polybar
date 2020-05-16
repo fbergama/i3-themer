@@ -33,9 +33,9 @@ modules-left = ${polybar['modules-left']}
 modules-center = ${polybar['modules-center']}
 modules-right = ${polybar['modules-right']}
 
-tray-position =
+tray-position = none
 ;tray-padding =
-wm-restack = i3
+;wm-restack = i3
 override-redirect = false
 
 cursor-click = pointer
