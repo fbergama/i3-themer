@@ -64,10 +64,8 @@ function copyPolybarLauncher(){
 }
 function restartApps(){
     pkill dunst
-    nitrogen --restore
     xrdb ${CONFIG_PATH['xresources']}
-    i3-msg reload
-    . $XDG_CONFIG_HOME/polybar/i3wmthemer_bar_launch.sh
+    i3-msg restart
     notify-send "Theme applied successfully!"
 }
 
