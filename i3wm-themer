@@ -49,11 +49,7 @@ function touchConfigFiles(){
     mkdir -p $XDG_CONFIG_HOME/polybar
     mkdir -p $XDG_CONFIG_HOME/nitrogen
     mkdir -p $XDG_CONFIG_HOME/dunst
-    touch ${CONFIG_PATH['i3']}
-    touch ${CONFIG_PATH['dunst']}
-    touch ${CONFIG_PATH['nitrogen']}
-    touch ${CONFIG_PATH['polybar']}
-    touch ${CONFIG_PATH['xresources']}
+    touch ${CONFIG_PATH[@]}
 }
 
 function copyWallpapers(){
