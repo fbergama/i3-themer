@@ -22,22 +22,24 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <h1>What you will need</h1>
 <ul>
-    <li><a href="https://packages.debian.org/sid/bash">Bash</a> v4 or later</li>
-    <li><a href="https://github.com/Airblader/i3">i3-gaps</a></li>
+    <li><a href="https://www.gnu.org/software/bash/">Bash</a> v4 or later</li>
+    <li><a href="https://i3wm.org">i3</a></li>
     <li><a href="https://github.com/jaagr/polybar">Polybar</a></li>
     <li><a href="https://github.com/DaveDavenport/rofi">Rofi</a></li>
     <li><a href="https://fontawesome.com">Font-Awesome-5</a></li>
     <li><a href="https://packages.debian.org/sid/x11/nitrogen">Nitrogen</a></li>
     <li><a href="https://github.com/adobe-fonts/source-code-pro">Adobe Source Code Pro font</a></li>
     <li><a href="https://packages.debian.org/sid/rxvt">rxvt-unicode</a></li>
-    <li><a href="https://packages.debian.org/sid/alsa-utils">alsa-utils</a></li>
     <li><a href="https://packages.debian.org/sid/dunst">Dunst notification manager</a></li>
 </ul>
-<p>If you are a Debian user you can get the packages <a href="assets/setup/">here</a></p>
 
-<p>Fedora dependencies</p>
-$ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi
-$ sudo dnf install sensible-utils
+<p>For Fedora users:</p>
+    
+    $ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts
+    
+<p>For Debian users:</p>
+
+    Still in progress...
 
 <h2>Using the script</h2>
 <ul>
