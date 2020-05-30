@@ -11,9 +11,6 @@ local ws7='$ws7'
 local ws8='$ws8'
 local mode_system='$mode_system'
 local HOME='$HOME'
-local mode_gaps='$mode_gaps'
-local mode_gaps_outer='$mode_gaps_outer'
-local mode_gaps_inner='$mode_gaps_inner'
 
 cat << EOF
 set $mod Mod4
