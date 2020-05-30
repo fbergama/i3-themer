@@ -35,6 +35,10 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 </ul>
 <p>If you are a Debian user you can get the packages <a href="assets/setup/">here</a></p>
 
+<p>Fedora dependencies</p>
+$ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi
+$ sudo dnf install sensible-utils
+
 <h2>Using the script</h2>
 <ul>
 
