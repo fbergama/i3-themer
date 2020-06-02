@@ -35,7 +35,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <p>For Fedora users:</p>
     
-    $ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts
+    $ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils
     
 <p>For Debian users:</p>
 
