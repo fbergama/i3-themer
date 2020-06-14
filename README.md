@@ -1,4 +1,4 @@
-<h1>i3wm-themer</h1>
+<h1>i3-themer</h1>
 
 ![](https://img.shields.io/github/last-commit/cizordj/i3wm-themer/master)
 ![](https://img.shields.io/github/license/cizordj/i3wm-themer)
@@ -35,11 +35,11 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <p>For Fedora users:</p>
     
-    $ sudo dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils
+    # dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils
     
 <p>For Debian users:</p>
 
-    Still in progress...
+    # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome sensible-utils
 
 <h2>Using the script</h2>
 <ul>
