@@ -65,12 +65,6 @@ To apply a desired theme
 And here you go, you have a BEAUTIFUL desktop! !!
 </ul>
 
-<h2>Disclaimer</h2>
-<ul>
-I am not responsible for any harm done to your PC by anything in the repository. Use everything with
-caution!
-</ul>
-
 <h2>Available Themes</h2>
 <ul>
 Just take a look at the <a href="themes/">Theme collection</a> and pick the ones you like.
