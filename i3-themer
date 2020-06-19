@@ -6,7 +6,7 @@ XDG_CONFIG_HOME="$HOME/.config"
 
 function helpText() {
     cat << HELP
-i3-themer, a non-interactive program that applies themes to the i3 window manager
+$(basename "$0"), a non-interactive program that applies themes to the i3 window manager
 
 Usage:
     ./$(basename "$0") -a [THEME_ID] [OPTIONS]
@@ -20,6 +20,7 @@ Options:
   -r, --restore             Restore to distribution default configs
   -o, --output              Custom directory to save the files
 
+Available themes:
 $(listThemes)
 
 Check /assets/screenshots to see how the themes look like and
@@ -28,8 +29,20 @@ HELP
 exit 0
 }
 function listThemes(){
-    echo "Available themes:"
-    ls themes/ | grep -v ".md"
+    themesList=$(ls themes/ | grep -v ".md")
+    i=0
+
+    for line in $themesList; do
+        if [ $i -eq 3 ] ; then
+            output="$line\n"
+            i=-1
+        else
+            output="$line\t"
+        fi
+        ((i++))
+        echo -e -n $output
+    done
+    echo -e "\\n"
 }
 function restoreDefaults(){
     echo "Function still not implemented"
@@ -41,7 +54,7 @@ The theme you chose does not exist in the themes' directory
 
 $(listThemes)
 EOF
-    exit 1
+exit 1
 }
 function touchConfigFiles(){
     mkdir -p $XDG_CONFIG_HOME
