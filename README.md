@@ -41,29 +41,29 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
     # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome sensible-utils
 
-<p>You can install the Adobe source code Debian package from <a href="https://github.com/cizordj/i3-themer/blob/master/assets/setup/fonts-source-code-pro_1-1_all.deb">here</a></p>
+<p>You can download the missing dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/setup/">here</a></p>
 <h2>Using the script</h2>
 <ul>
 
-Clone this repository and run the script:
+Download this repo and run the script:
 
-    git clone https://github.com/cizordj/i3wm-themer.git
-    cd i3wm-themer/
-    chmod +x i3wm-themer
-    ./i3wm-themer
+    git clone https://github.com/cizordj/i3-themer.git
+    cd i3-themer/
+    chmod +x i3-themer
+    ./i3-themer
 
 The first time you run the script it will show you the help text and the available
 themes altogether with the possible command line options.
 
 To list the available themes type
     
-    ./i3wm-themer -l
+    ./i3-themer -l
 
 To apply a desired theme
     
-    ./i3wm-themer -a [THEME_ID]
+    ./i3-themer -a [THEME_ID]
 
-And here you go, you have a BEAUTIFUL desktop! !!
+And here you go, you have now a beatiful desktop!
 </ul>
 
 <h2>Available Themes</h2>
@@ -72,14 +72,6 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 
 ![](assets/workflow/themepreview.png?raw=true)
 
-</ul>
-
-<h2>About this fork</h2>
-<ul>
-This project is a fork from the original <a href="https://github.com/unix121/i3wm-themer">i3wm-themer</a> from <a href="https://github.com/unix121">@unix121</a>.
-The biggest difference between the two forks is that in mine the code was completely rewritten in BASH and is more compatible with debian-like systems.
-    
-Also in this fork the dunst notification manager will be colorized.
 </ul>
 <h2>Contributing</h2>
 <ul>
