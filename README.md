@@ -41,6 +41,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
     # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome sensible-utils
 
+<p>You can install the Adobe source code Debian package from <a href="https://github.com/cizordj/i3-themer/blob/master/assets/setup/fonts-source-code-pro_1-1_all.deb">here</a></p>
 <h2>Using the script</h2>
 <ul>
 
