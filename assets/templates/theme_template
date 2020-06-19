@@ -4,22 +4,22 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['color0']='#1E272B'
-xresources['color1']='#685742'
-xresources['color2']='#9D6A47'
-xresources['color3']='#B36D43'
-xresources['color4']='#78824B'
-xresources['color5']='#D99F57'
-xresources['color6']='#C9A554'
-xresources['color7']='#EAD49B'
-xresources['color8']='#666666'
-xresources['color9']='#685743'
-xresources['color10']='#9D6A47'
-xresources['color11']='#B36D43'
-xresources['color12']='#78824B'
-xresources['color13']='#D99F57'
+xresources['color0']='#1E272B' # Terminal background color
+xresources['color1']='#685742' # brown
+xresources['color2']='#9D6A47' # polybar left color
+xresources['color3']='#B36D43' # window border color
+xresources['color4']='#78824B' # polybar left color
+xresources['color5']='#D99F57' # polybar clock background
+xresources['color6']='#C9A554' # mustard color 
+xresources['color7']='#EAD49B' # light mustard
+xresources['color8']='#666666' # gray 
+xresources['color9']='#685743' # brown
+xresources['color10']='#9D6A47' # light brown
+xresources['color11']='#B36D43' # a little lighter brown
+xresources['color12']='#78824B' # polybar left color
+xresources['color13']='#D99F57' # polybar center color and dunst primary color
 xresources['color14']='#C9A554'
-xresources['color15']='#EAD49B'
+xresources['color15']='#EAD49B' # terminal font color
 xresources['background']=${xresources['color0']}
 xresources['foreground']=${xresources['color7']}
 xresources['cursorcolor']=${xresources['color7']}
