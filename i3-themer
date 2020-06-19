@@ -6,7 +6,7 @@ XDG_CONFIG_HOME="$HOME/.config"
 
 function helpText() {
     cat << HELP
-i3wm-themer, a non-interactive program that applies themes to the i3 window manager
+i3-themer, a non-interactive program that applies themes to the i3 window manager
 
 Usage:
     ./$(basename "$0") -a [THEME_ID] [OPTIONS]
@@ -23,7 +23,7 @@ Options:
 $(listThemes)
 
 Check /assets/screenshots to see how the themes look like and
-send bugs and questions to <https://github.com/cizordj/i3wm-themer>
+send bugs and questions to <https://github.com/cizordj/i3-themer>
 HELP
 exit 0
 }
