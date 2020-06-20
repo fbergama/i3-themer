@@ -41,7 +41,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
     # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome sensible-utils
 
-<p>You can download the missing dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/setup/">here</a></p>
+<p>You can download the missing dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
 <h2>Using the script</h2>
 <ul>
 
