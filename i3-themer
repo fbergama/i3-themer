@@ -75,6 +75,7 @@ function restartApps(){
     pkill dunst
     xrdb ${CONFIG_PATH['xresources']}
     i3-msg restart
+    nitrogen --restore
     notify-send "Theme applied successfully!"
 }
 
