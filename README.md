@@ -7,7 +7,7 @@
 <ul>
 Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3wm</a>.
 
-![](assets/workflow/workflow.gif?raw=true)
+![](assets/screenshots/workflow.gif?raw=true)
 </ul>
 
 <h1>Why?</h1>
@@ -69,7 +69,7 @@ And here you go, you have now a beatiful desktop!
 <ul>
 Just take a look at the <a href="themes/">Theme collection</a> and pick the ones you like.
 
-![](assets/workflow/themepreview.png?raw=true)
+![](assets/screenshots/themepreview.png?raw=true)
 
 </ul>
 <h2>Contributing</h2>
