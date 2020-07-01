@@ -4,22 +4,22 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['color0']='#1E272B' # Terminal background color
-xresources['color1']='#685742' # brown
-xresources['color2']='#9D6A47' # polybar left color
-xresources['color3']='#B36D43' # window border color
-xresources['color4']='#78824B' # polybar left color
-xresources['color5']='#D99F57' # polybar clock background
-xresources['color6']='#C9A554' # mustard color 
-xresources['color7']='#EAD49B' # light mustard
-xresources['color8']='#666666' # gray 
-xresources['color9']='#685743' # brown
-xresources['color10']='#9D6A47' # light brown
-xresources['color11']='#B36D43' # a little lighter brown
-xresources['color12']='#78824B' # polybar left color
-xresources['color13']='#D99F57' # polybar center color and dunst primary color
-xresources['color14']='#C9A554'
-xresources['color15']='#EAD49B' # terminal font color
+xresources['color0']='#040305' # Terminal background color
+xresources['color1']='#151119' # brown
+xresources['color2']='#29222e' # polybar left color
+xresources['color3']='#97ad79' # window border color
+xresources['color4']='#655870' # polybar left color
+xresources['color5']='#8c7e99' # polybar clock background
+xresources['color6']='#b5acbe' # mustard color 
+xresources['color7']='#e3e1e7' # light mustard
+xresources['color8']='#c89a6e' # gray 
+xresources['color9']='#b693d3' # brown
+xresources['color10']='#b76988' # light brown
+xresources['color11']='#c0a7d7' # a little lighter brown
+xresources['color12']='#628f83' # polybar left color
+xresources['color13']='#97ad79' # polybar center color and dunst primary color
+xresources['color14']='#86b1a5'
+xresources['color15']='#7096a9' # terminal font color
 xresources['background']=${xresources['color0']}
 xresources['foreground']=${xresources['color7']}
 xresources['cursorcolor']=${xresources['color7']}
@@ -30,7 +30,7 @@ xresources['rofi.color-urgent']="${xresources['color0']}, ${xresources['color7']
 
 i3wm['client.background']=${xresources['color0']}
 i3wm['client.focused']="${xresources['color7']} ${xresources['color0']} ${xresources['color7']} ${xresources['color2']} ${xresources['color2']}"
-i3wm['client.unfocused']="${xresources['color7']} ${xresources['color0']} ${xresources['color7']} ${xresouces['color4']}"
+i3wm['client.unfocused']="${xresources['color7']} ${xresources['color0']} ${xresources['color7']} ${xresources['color4']}"
 i3wm['client.focused_inactive']="${xresources['color7']} ${xresources['color0']} ${xresources['color7']} ${xresources['color4']} ${xresources['color4']}"
 i3wm['client.urgent']="${xresources['color7']} ${xresources['color0']} ${xresources['color7']} ${xresources['color4']} ${xresources['color4']}"
 i3wm['client.placeholder']="${xresources['color7']} ${xresources['color0']} ${xresources['color0']} ${xresources['color4']} ${xresources['color4']}"
@@ -56,10 +56,10 @@ polybar['label-separator-foreground']=${xresources['color2']}
 polybar['format-connected-foreground']=${xresources['color0']}
 polybar['format-connected-background']=${xresources['color2']}
 polybar['format-connected-prefix-foreground']=${xresources['color0']}
-polybar['ramp-signal-foreground']=${xresouces['color0']}
+polybar['ramp-signal-foreground']=${xresources['color0']}
 
 dunstrc['background']=${polybar['background']}
 dunstrc['foreground']=${polybar['foreground']}
 dunstrc['frame_color']=${polybar['foreground']}
 
-wallpaper='[wallpaper_name].png'
+wallpaper='000.png'
