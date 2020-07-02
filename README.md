@@ -34,11 +34,11 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 <p>For Fedora users:</p>
     
-    # dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts
+    # dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils xdg-utils
     
 <p>For Debian users:</p>
 
-    # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome
+    # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils
 
 <p>You can download the missing dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
 <h2>Using the script</h2>
