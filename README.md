@@ -62,7 +62,7 @@ To apply a desired theme
     
     ./i3-themer -a [THEME_ID]
 
-And here you go, you have now a beatiful desktop!
+And that's it, you have now a beatiful desktop!
 </ul>
 
 <h2>Available Themes</h2>
