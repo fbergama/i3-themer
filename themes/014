@@ -5,17 +5,17 @@ declare -A polybar
 declare -A dunstrc
 
 xresources['color0']='#040305' # Terminal background color
-xresources['color1']='#151119' # brown
-xresources['color2']='#29222e' # polybar left color
-xresources['color3']='#97ad79' # window border color
+xresources['color1']='#7096a9' # git commit color
+xresources['color2']='#e3e1e7' # polybar right color
+xresources['color3']='#97ad79' # window border color 97ad79
 xresources['color4']='#655870' # polybar left color
-xresources['color5']='#8c7e99' # polybar clock background
-xresources['color6']='#b5acbe' # mustard color 
-xresources['color7']='#e3e1e7' # light mustard
-xresources['color8']='#c89a6e' # gray 
-xresources['color9']='#b693d3' # brown
-xresources['color10']='#b76988' # light brown
-xresources['color11']='#c0a7d7' # a little lighter brown
+xresources['color5']='#8c7e99' # 
+xresources['color6']='#b5acbe' #  
+xresources['color7']='#e3e1e7' # dunst border color
+xresources['color8']='#c89a6e' # 
+xresources['color9']='#b693d3' #
+xresources['color10']='#b76988' #
+xresources['color11']='#c0a7d7' #
 xresources['color12']='#628f83' # polybar left color
 xresources['color13']='#97ad79' # polybar center color and dunst primary color
 xresources['color14']='#86b1a5'
@@ -62,4 +62,4 @@ dunstrc['background']=${polybar['background']}
 dunstrc['foreground']=${polybar['foreground']}
 dunstrc['frame_color']=${polybar['foreground']}
 
-wallpaper='000.png'
+wallpaper='014.jpg'
