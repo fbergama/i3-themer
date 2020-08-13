@@ -15,9 +15,9 @@ xresources['color4']='#5f819d'
 xresources['color5']='#85678f'
 xresources['color6']='#5e8d87'
 xresources['color7']='#707880'
-xresources['color8']='#373b41'
+xresources['color8']='#393b41'
 xresources['color9']='#cc6666'
-xresources['color10']='#707880'
+xresources['color10']='#f0c674'
 xresources['color11']='#f0c674'
 xresources['color12']='#5f819d'
 xresources['color13']='#b294bb'
@@ -59,7 +59,7 @@ polybar['format-connected-prefix-foreground']='#c5c8c6'
 polybar['ramp-signal-foreground']='#c5c8c6'
 
 dunstrc['background']=${polybar['background']}
-dunstrc['foreground']=${polybar['format-background']}
-dunstrc['frame_color']=${polybar['format-background']}
+dunstrc['foreground']=${polybar['foreground']}
+dunstrc['frame_color']=${polybar['foreground']}
 
 wallpaper='010.png'
