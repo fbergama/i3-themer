@@ -62,5 +62,13 @@ URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down:  \033[1;6B
 URxvt*transparent: true
 URxvt*shading: 20
+
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 XRESOURCES
 }
