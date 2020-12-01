@@ -1,7 +1,7 @@
 #!/bin/bash
 declare -A CONFIG_PATH
 test ! $# -gt 0
-THERE_IS_NO_ARGUMENT=$?
+THERE_IS_NO_ARGUMENT="$?"
 XDG_CONFIG_HOME="$HOME/.config"
 
 function helpText() {
@@ -57,23 +57,23 @@ EOF
 exit 1
 }
 function touchConfigFiles(){
-    mkdir -p $XDG_CONFIG_HOME
-    mkdir -p $XDG_CONFIG_HOME/i3
-    mkdir -p $XDG_CONFIG_HOME/polybar
-    mkdir -p $XDG_CONFIG_HOME/nitrogen
-    mkdir -p $XDG_CONFIG_HOME/dunst
-    touch ${CONFIG_PATH[@]}
+    mkdir -p "$XDG_CONFIG_HOME"
+    mkdir -p "$XDG_CONFIG_HOME/i3"
+    mkdir -p "$XDG_CONFIG_HOME/polybar"
+    mkdir -p "$XDG_CONFIG_HOME/nitrogen"
+    mkdir -p "$XDG_CONFIG_HOME/dunst"
+    touch "${CONFIG_PATH[@]}"
 }
 
 function copyWallpapers(){
-    cp -u assets/wallpapers/* -t $XDG_CONFIG_HOME/nitrogen/
+    cp -u assets/wallpapers/* -t "$XDG_CONFIG_HOME/nitrogen/"
 }
 function copyPolybarLauncher(){
-    cp -u assets/scripts/i3wmthemer_bar_launch.sh -t $XDG_CONFIG_HOME/polybar/
+    cp -u assets/scripts/i3wmthemer_bar_launch.sh -t "$XDG_CONFIG_HOME/polybar/"
 }
 function restartApps(){
     pkill dunst
-    xrdb ${CONFIG_PATH['xresources']}
+    xrdb "${CONFIG_PATH['xresources']}"
     i3-msg restart
     nitrogen --restore
     notify-send "Theme applied successfully!"
@@ -92,7 +92,7 @@ while [ 0 ]; do
         cd $1 || exit 1
         XDG_CONFIG_HOME=`pwd`
         unset -f restartApps
-        cd $OLDPWD
+        cd "$OLDPWD"
     elif [ "$1" = "-r" -o "$1" = "--restore" -o "$1" = "restore" ] ; then
         restoreDefaults
     elif [ "$1" = "-l" -o "$1" = "--list" -o "$1" = "list" ] ; then
@@ -109,7 +109,7 @@ CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
 CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
 if [[ -f "$CHOSEN_THEME" ]] ; then
-    source $CHOSEN_THEME
+    source "$CHOSEN_THEME"
 else
     missingTheme
 fi
@@ -118,12 +118,12 @@ touchConfigFiles
 copyWallpapers
 copyPolybarLauncher
 for file in defaults/* ; do
-    source $file
+    source "$file"
 done
 
-dunstConfig > ${CONFIG_PATH['dunst']}
-i3config > ${CONFIG_PATH['i3']}
-nitrogenConfig > ${CONFIG_PATH['nitrogen']}
-polybarConfig > ${CONFIG_PATH['polybar']}
-xresourcesConfig > ${CONFIG_PATH['xresources']}
+dunstConfig > "${CONFIG_PATH['dunst']}"
+i3config > "${CONFIG_PATH['i3']}"
+nitrogenConfig > "${CONFIG_PATH['nitrogen']}"
+polybarConfig > "${CONFIG_PATH['polybar']}"
+xresourcesConfig > "${CONFIG_PATH['xresources']}"
 restartApps 2&> /dev/null
