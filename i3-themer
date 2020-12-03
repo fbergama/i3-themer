@@ -4,6 +4,12 @@ test ! $# -gt 0
 THERE_IS_NO_ARGUMENT="$?"
 XDG_CONFIG_HOME="$HOME/.config"
 
+CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
+CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
+CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
+CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
+CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
+
 function helpText() {
     cat << HELP
 $(basename "$0"), a non-interactive program that applies themes to the i3 window manager
@@ -45,8 +51,19 @@ function listThemes(){
     echo -e "\\n"
 }
 function restoreDefaults(){
-    echo "Function still not implemented"
-    exit 0
+   rm "${CONFIG_PATH[@]}" "$XDG_CONFIG_HOME/polybar/i3wmthemer_bar_launch.sh"
+   rm "$XDG_CONFIG_HOME/nitrogen/"*
+   rmdir "$XDG_CONFIG_HOME/i3"
+   rmdir "$XDG_CONFIG_HOME/polybar"
+   rmdir "$XDG_CONFIG_HOME/nitrogen"
+   rmdir "$XDG_CONFIG_HOME/dunst"
+   cat << EOF
+i3-themer successfully removed! You may want to remove the dependencies manually.
+Type 'i3-msg restart' to go back to defaults.
+
+Have a great day!
+EOF
+    exit
 }
 function missingTheme(){
     cat << EOF
@@ -79,6 +96,7 @@ function restartApps(){
     notify-send "Theme applied successfully!"
 }
 
+
 while [ 0 ]; do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
         helpText
@@ -103,11 +121,7 @@ while [ 0 ]; do
     fi
     shift 1
 done
-CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
-CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
-CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
-CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
-CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
+
 if [[ -f "$CHOSEN_THEME" ]] ; then
     source "$CHOSEN_THEME"
 else
