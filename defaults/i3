@@ -227,10 +227,6 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
-exec_always --no-startup-id urxvtd -q
-
-# set TERMINAL environment variable in /etc/environment
-# TERMINAL='/usr/bin/urxvtc'
 
 # Theme colors
 client.focused          ${i3wm['client.focused']}
