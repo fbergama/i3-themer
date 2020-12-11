@@ -169,5 +169,29 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
+
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+Master-mixer = default
+
+mapped = true
+
+format-volume = <ramp-volume> <label-volume>%
+format-muted = <label-muted>
+label-volume = %percentage%
+label-volume-foreground = ${polybar['format-foreground']}
+label-muted =  muted
+label-muted-foreground = ${polybar['format-background']}
+format-volume-padding = 2
+format-muted-padding = 2
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
 POLYBAR
 }
