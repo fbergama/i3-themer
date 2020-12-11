@@ -196,8 +196,8 @@ format-muted = <label-muted>
 label-muted = "   muted  "
 label-volume = " %percentage%  "
 
-format-volume-padding = 4
-format-muted-padding = 4
+format-volume-padding = 0
+format-muted-padding = 0
 
 ramp-volume-0 = "  "
 ramp-volume-1 = "  "
