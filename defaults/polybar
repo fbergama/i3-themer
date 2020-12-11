@@ -181,17 +181,27 @@ Master-mixer = default
 
 mapped = true
 
-format-volume = <ramp-volume> <label-volume>%
-format-muted = <label-muted>
-label-volume = %percentage%
+label-volume-background = ${polybar['format-background']}
+label-muted-background = ${polybar['format-background']}
+ramp-volume-background = ${polybar['format-background']}
+ramp-headphones-background = ${polybar['format-background']}
 label-volume-foreground = ${polybar['format-foreground']}
-label-muted =  muted
-label-muted-foreground = ${polybar['format-background']}
-format-volume-padding = 2
-format-muted-padding = 2
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-headphones-0 = 
+label-muted-foreground = ${polybar['format-foreground']} 
+ramp-volume-foreground = ${polybar['format-foreground']}
+ramp-headphones-foreground = ${polybar['format-foreground']}
+
+format-volume = <ramp-volume><label-volume>
+format-muted = <label-muted>
+
+label-muted = "   muted  "
+label-volume = " %percentage%  "
+
+format-volume-padding = 4
+format-muted-padding = 4
+
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+ramp-headphones-0 = "  "
 POLYBAR
 }
