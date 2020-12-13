@@ -46,9 +46,8 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
 Download this repo and run the script:
 
-    git clone https://github.com/cizordj/i3-themer.git
+    git clone --depth=1 https://github.com/cizordj/i3-themer.git
     cd i3-themer/
-    chmod +x i3-themer
     ./i3-themer
 
 The first time you run the script it will show you the help text and the available
