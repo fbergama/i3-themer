@@ -10,7 +10,7 @@ CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
 CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
 
-function helpText() {
+function printHelp() {
     cat << HELP
 $(basename "$0"), a non-interactive program that applies themes to the i3 window manager
 
@@ -99,9 +99,9 @@ function restartApps(){
 
 while [ 0 ]; do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
-        helpText
+        printHelp
     elif [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "help" ] ; then
-        helpText
+        printHelp
     elif [ "$1" = "-a" -o "$1" = "--apply" -o "$1" = "apply" ] ; then
         shift 1
         CHOSEN_THEME="$PWD/themes/$1"
