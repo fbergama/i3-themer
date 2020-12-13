@@ -46,9 +46,9 @@ function listThemes(){
             output="$line\t"
         fi
         ((i++))
-        echo -e -n $output
+        printf '%b' "$output"
     done
-    echo -e "\\n"
+    printf '%b' "\n"
 }
 function restoreDefaults(){
    rm "${CONFIG_PATH[@]}" "$XDG_CONFIG_HOME/polybar/i3wmthemer_bar_launch.sh"
