@@ -107,7 +107,7 @@ while [ 0 ]; do
         CHOSEN_THEME="$PWD/themes/$1"
     elif [ "$1" = "-o" -o "$1" = "--output" -o "$1" = "output" ] ; then
         shift 1
-        cd $1 || exit 1
+        cd "$1" || exit 1
         XDG_CONFIG_HOME=`pwd`
         unset -f restartApps
         cd "$OLDPWD"
