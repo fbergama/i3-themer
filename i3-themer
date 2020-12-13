@@ -97,7 +97,8 @@ function restartApps(){
 }
 
 
-while [ 0 ]; do
+while true
+do
     if [ $THERE_IS_NO_ARGUMENT -eq 0 ]; then
         printHelp
     elif [ "$1" = "-h" -o "$1" = "--help" -o "$1" = "help" ] ; then
