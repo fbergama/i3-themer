@@ -66,3 +66,6 @@ Just take a look at the <a href="themes/">Theme collection</a> and pick the ones
 If you are interested in contributing with new themes
 click <a href="https://github.com/cizordj/i3wm-themer/tree/master/assets/templates">here</a>
 </ul>
+
+<h2>Guidelines</h2>
+Users can add their own static configuration in the default.d/ directory, all updates in that place will be ignored by git.
