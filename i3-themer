@@ -141,4 +141,11 @@ i3config > "${CONFIG_PATH['i3']}"
 nitrogenConfig > "${CONFIG_PATH['nitrogen']}"
 polybarConfig > "${CONFIG_PATH['polybar']}"
 xresourcesConfig > "${CONFIG_PATH['xresources']}"
+
+for file in defaults.d/* ; do
+    source "$file"
+done
+i3config >> "${CONFIG_PATH['i3']}"
+polybarConfig >> "${CONFIG_PATH['polybar']}"
+xresourcesConfig >> "${CONFIG_PATH['xresources']}"
 restartApps 2&> /dev/null
