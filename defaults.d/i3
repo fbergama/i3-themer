@@ -5,6 +5,15 @@
 
 function i3config(){
 local mod='$mod'
+local mode_gaps='$mode_gaps'
+local mode_gaps_outer='$mode_gaps_outer'
+local mode_gaps_inner='$mode_gaps_inner'
+local mode_gaps_horiz='$mode_gaps_horiz'
+local mode_gaps_verti='$mode_gaps_verti'
+local mode_gaps_top='$mode_gaps_top'
+local mode_gaps_right='$mode_gaps_right'
+local mode_gaps_bottom='$mode_gaps_bottom'
+local mode_gaps_left='$mode_gaps_left'
 
 cat << EOF
 focus_follows_mouse no
@@ -18,5 +27,6 @@ bindsym $mod+F2 exec --no-startup-id sensible-browser
 bindsym $mod+F3 exec --no-startup-id i3-sensible-terminal -e ranger
 bindsym $mod+F4 exec --no-startup-id galculator
 bindsym $mod+F5 exec --no-startup-id i3-sensible-terminal -e cmus
+
 EOF
 }
