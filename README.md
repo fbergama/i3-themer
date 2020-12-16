@@ -68,4 +68,4 @@ click <a href="https://github.com/cizordj/i3wm-themer/tree/master/assets/templat
 </ul>
 
 <h2>Guidelines</h2>
-Users can add their own static configuration in the default.d/ directory, all updates in that place will be ignored by git.
+Users can add their own static configuration in the default.d/ directory, all the files in that place will be concatenated with the template files.
