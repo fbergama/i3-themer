@@ -248,16 +248,5 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
-focus_follows_mouse no
-
-# User defined keys
-bindsym Print exec i3-scrot -d
-bindsym Shift+Print exec i3-scrot -s
-bindsym Mod1+Sys_Req exec i3-scrot -w
-bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e alsamixer
-bindsym $mod+F2 exec --no-startup-id sensible-browser
-bindsym $mod+F3 exec --no-startup-id i3-sensible-terminal -e ranger
-bindsym $mod+F4 exec --no-startup-id galculator
-bindsym $mod+F5 exec --no-startup-id i3-sensible-terminal -e cmus
 EOF
 }
