@@ -20,19 +20,9 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 </ul>
 
 <h1>What you will need</h1>
-<ul>
-    <li><a href="https://www.gnu.org/software/bash/">Bash</a> v4 or later</li>
-    <li><a href="https://i3wm.org">i3</a></li>
-    <li><a href="https://github.com/jaagr/polybar">Polybar</a></li>
-    <li><a href="https://github.com/DaveDavenport/rofi">Rofi</a></li>
-    <li><a href="https://fontawesome.com">Font-Awesome-5</a></li>
-    <li><a href="https://packages.debian.org/sid/x11/nitrogen">Nitrogen</a></li>
-    <li><a href="https://github.com/adobe-fonts/source-code-pro">Adobe Source Code Pro font</a></li>
-    <li><a href="https://packages.debian.org/sid/rxvt">rxvt-unicode</a></li>
-    <li><a href="https://packages.debian.org/sid/dunst">Dunst notification manager</a></li>
-</ul>
 
-<p>For Fedora users:</p>
+<P>The i3 themer relies on a couple of dependencies to work nicely.</p>
+<p>For Fedora users</p>
     
     # dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode
     
@@ -40,8 +30,8 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
     # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode
 
-<p>You can download the missing dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
-<h2>Using the script</h2>
+<p>You can download the remaining dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
+<h2>How to apply themes</h2>
 <ul>
 
 Download this repo and run the script:
