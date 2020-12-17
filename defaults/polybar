@@ -3,10 +3,10 @@
 function polybarConfig(){
 
 	function wired_connection(){
-		ls /sys/class/net | grep 'enp' | tr '\n' ' '
+		ls /sys/class/net | grep 'enp' | tr -d '\n'
 	}
 	function wireless_connection(){
-		ls /sys/class/net | grep 'wl' | tr '\n' ' '
+		ls /sys/class/net | grep 'wl' | tr -d '\n'
 	}
 
 local USER='$USER'
