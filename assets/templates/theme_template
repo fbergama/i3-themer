@@ -4,11 +4,11 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['background']=''
-xresources['foreground']=''
+xresources['background']='#212121'
+xresources['foreground']='#FFFFFF'
 xresources['cursorcolor']=${xresources['foreground']}
 xresources['color0']=${xresources['background']}
-xresources['color8']=''
+xresources['color8']=${xresources['foreground']}
 xresources['color1']=''
 xresources['color9']=${xresources['color1']}
 xresources['color2']=''
