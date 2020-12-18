@@ -4,25 +4,25 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['color0']='#040305' # Terminal background color
-xresources['color8']='#c89a6e' # 
-xresources['color1']='#7096a9' # git commit color
-xresources['color9']='#b693d3' #
-xresources['color2']='#86b1a5' # polybar right color
-xresources['color10']='#b76988' #
-xresources['color3']='#97ad79' # window border color 97ad79
-xresources['color11']='#c0a7d7' #
-xresources['color4']='#655870' # polybar left color
-xresources['color12']='#628f83' # polybar left color
-xresources['color5']='#8c7e99' # 
-xresources['color13']='#97ad79' # polybar center color and dunst primary color
-xresources['color6']='#b5acbe' #  
-xresources['color14']='#86b1a5'
-xresources['color7']='#e3e1e7' # dunst border color
-xresources['color15']='#7096a9' # terminal font color
-xresources['background']=${xresources['color0']}
-xresources['foreground']=${xresources['color7']}
-xresources['cursorcolor']=${xresources['color7']}
+xresources['background']='#040305'
+xresources['foreground']='#e3e1e7'
+xresources['cursorcolor']=${xresources['foreground']}
+xresources['color0']=${xresources['background']}
+xresources['color8']='#c89a6e'
+xresources['color1']='#7096a9'
+xresources['color9']=${xresources['color1']}
+xresources['color2']='#86b1a5'
+xresources['color10']=${xresources['color2']}
+xresources['color3']=${xresources['color2']}
+xresources['color11']=${xresources['color2']}
+xresources['color4']='#655870'
+xresources['color12']=${xresources['color4']}
+xresources['color5']='#8c7e99'
+xresources['color13']=${xresources['color5']}
+xresources['color6']='#b69d3d'
+xresources['color14']=${xresources['color6']}
+xresources['color7']=${xresources['foreground']}
+xresources['color15']=${xresources['foreground']}
 xresources['rofi.color-window']="${xresources['color0']}, ${xresources['color2']}, ${xresources['color2']}"
 xresources['rofi.color-normal']="${xresources['color0']}, ${xresources['color7']}, ${xresources['color0']}, ${xresources['color0']}, ${xresources['color4']}"
 xresources['rofi.color-active']="${xresources['color0']}, ${xresources['color7']}, ${xresources['color0']}, ${xresources['color0']}, ${xresources['color4']}"
