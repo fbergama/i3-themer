@@ -4,22 +4,22 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['background']='#040305'
-xresources['foreground']='#e3e1e7'
+xresources['background']='#212121'
+xresources['foreground']='#FFFFFF'
 xresources['cursorcolor']=${xresources['foreground']}
 xresources['color0']=${xresources['background']}
-xresources['color8']='#c89a6e'
-xresources['color1']='#7096a9'
+xresources['color8']=${xresources['foreground']}
+xresources['color1']='#FFC107'
 xresources['color9']=${xresources['color1']}
-xresources['color2']='#86b1a5'
+xresources['color2']='#757575'
 xresources['color10']=${xresources['color2']}
-xresources['color3']=${xresources['color2']}
-xresources['color11']=${xresources['color2']}
-xresources['color4']='#655870'
+xresources['color3']='#E1BEE7'
+xresources['color11']=${xresources['color3']}
+xresources['color4']='#9C27B0'
 xresources['color12']=${xresources['color4']}
-xresources['color5']='#8c7e99'
+xresources['color5']='#7B1FA2'
 xresources['color13']=${xresources['color5']}
-xresources['color6']='#b69d3d'
+xresources['color6']='#BDBDBD'
 xresources['color14']=${xresources['color6']}
 xresources['color7']=${xresources['foreground']}
 xresources['color15']=${xresources['foreground']}
