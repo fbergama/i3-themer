@@ -3,6 +3,7 @@ declare -A CONFIG_PATH
 test ! $# -gt 0
 THERE_IS_NO_ARGUMENT="$?"
 XDG_CONFIG_HOME="$HOME/.config"
+cd "$(dirname "$0")"
 
 CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
 CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
