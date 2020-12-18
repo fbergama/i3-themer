@@ -4,25 +4,25 @@ declare -A i3wm
 declare -A polybar
 declare -A dunstrc
 
-xresources['color0']=''
-xresources['color1']=''
-xresources['color2']=''
-xresources['color3']=''
-xresources['color4']=''
-xresources['color5']=''
-xresources['color6']=''
-xresources['color7']=''
+xresources['background']=''
+xresources['foreground']=''
+xresources['cursorcolor']=${xresources['foreground']}
+xresources['color0']=${xresources['background']}
 xresources['color8']=''
-xresources['color9']=''
-xresources['color10']=''
-xresources['color11']=''
-xresources['color12']=''
-xresources['color13']=''
-xresources['color14']=''
-xresources['color15']=''
-xresources['background']=${xresources['color0']}
-xresources['foreground']=${xresources['color7']}
-xresources['cursorcolor']=${xresources['color7']}
+xresources['color1']=''
+xresources['color9']=${xresources['color1']}
+xresources['color2']=''
+xresources['color10']=${xresources['color2']}
+xresources['color3']=${xresources['color2']}
+xresources['color11']=${xresources['color2']}
+xresources['color4']=''
+xresources['color12']=${xresources['color4']}
+xresources['color5']=''
+xresources['color13']=${xresources['color5']}
+xresources['color6']=''
+xresources['color14']=${xresources['color6']}
+xresources['color7']=${xresources['foreground']}
+xresources['color15']=${xresources['foreground']}
 xresources['rofi.color-window']="${xresources['color0']}, ${xresources['color2']}, ${xresources['color2']}"
 xresources['rofi.color-normal']="${xresources['color0']}, ${xresources['color7']}, ${xresources['color0']}, ${xresources['color0']}, ${xresources['color4']}"
 xresources['rofi.color-active']="${xresources['color0']}, ${xresources['color7']}, ${xresources['color0']}, ${xresources['color0']}, ${xresources['color4']}"
