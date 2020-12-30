@@ -4,6 +4,6 @@
 function xresourcesConfig(){
 cat << XRESOURCES
 ! https://github.com/majutsushi/urxvt-font-size
-URxvt.perl-ext-common: ...,font-size
+! URxvt.perl-ext-common: ...,font-size
 XRESOURCES
 }
