@@ -39,8 +39,6 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <h2>How to apply themes</h2>
 <ul>
 
-<p>FreeBsd</p>
-
 Download this repo and run the script:
 
     git clone --depth=1 https://github.com/cizordj/i3-themer.git
