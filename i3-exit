@@ -1,5 +1,9 @@
 #!/bin/sh
 
+printHelp(){
+    echo "Usage: i3-exit {lock|logout|reboot|shutdown}"
+}
+
 lock(){
     screenshot="/tmp/qI5MkdEu.png"
     screenshotblur="/tmp/Vur4EooC.png"
@@ -19,4 +23,6 @@ case "$1" in
         systemctl reboot ;;
     shutdown)
         systemctl poweroff ;;
+    *)
+        printHelp ;;
 esac
