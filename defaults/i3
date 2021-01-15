@@ -24,7 +24,7 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-font xft:Source Code Pro 11
+font xft:Roboto Mono 11
 
 floating_modifier $mod
 

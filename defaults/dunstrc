@@ -2,7 +2,7 @@
 function dunstConfig(){
 cat << EOF
 [global]
-font = Source Code Pro Semibold 12
+font = Roboto Mono Semibold 12
 markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
