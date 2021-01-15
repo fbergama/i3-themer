@@ -24,17 +24,17 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <P>The i3 themer relies on a couple of dependencies to work nicely.</p>
 <p>Fedora</p>
     
-    # dnf install adobe-source-code-pro-fonts dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode
+    # dnf install dunst i3 polybar nitrogen rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode roboto-fonts
     
 <p>Debian</p>
 
-    # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode
+    # apt-get install dunst i3 polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-roboto
 
 <p>You can download the remaining dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
 
 <p>FreeBSD</p>
 
-    # pkg install bash i3 dunst polybar nitrogen rofi xdg-utils rxvt-unicode font-awesome sourcecodepro-ttf
+    # pkg install bash i3 dunst polybar nitrogen rofi xdg-utils rxvt-unicode font-awesome roboto-fonts-ttf
 
 <h2>How to apply themes</h2>
 <ul>
