@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 declare -A CONFIG_PATH
 test ! $# -gt 0
 THERE_IS_NO_ARGUMENT="$?"
@@ -84,10 +84,10 @@ function touchConfigFiles(){
 }
 
 function copyWallpapers(){
-    cp -u assets/wallpapers/* -t "$XDG_CONFIG_HOME/nitrogen/"
+    cp assets/wallpapers/* "$XDG_CONFIG_HOME/nitrogen/"
 }
 function copyPolybarLauncher(){
-    cp -u assets/scripts/i3wmthemer_bar_launch.sh -t "$XDG_CONFIG_HOME/polybar/"
+    cp assets/scripts/i3wmthemer_bar_launch.sh "$XDG_CONFIG_HOME/polybar/"
 }
 function restartApps(){
     pkill dunst
