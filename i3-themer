@@ -89,6 +89,10 @@ function copyWallpapers(){
 function copyPolybarLauncher(){
     cp assets/scripts/i3wmthemer_bar_launch.sh "$XDG_CONFIG_HOME/polybar/"
 }
+function copyUtilities(){
+    mkdir -p "$HOME/.local/bin"
+    cp "$PWD/i3-scrot" "$PWD/i3-exit" "$HOME/.local/bin"
+}
 function restartApps(){
     pkill dunst
     xrdb "${CONFIG_PATH['xresources']}"
@@ -133,6 +137,8 @@ fi
 touchConfigFiles
 copyWallpapers
 copyPolybarLauncher
+copyUtilities
+
 for file in defaults/* ; do
     source "$file"
 done
