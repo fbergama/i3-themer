@@ -1,0 +1,22 @@
+#!/bin/sh
+
+lock(){
+    screenshot="/tmp/qI5MkdEu.png"
+    screenshotblur="/tmp/Vur4EooC.png"
+    import -window root "$screenshot"
+    convert "$screenshot" -blur 0x5 "$screenshotblur"
+    rm "$screenshot"
+    i3lock -i "$screenshotblur"
+    xset dpms force off
+}
+
+case "$1" in
+    lock)
+        lock ;;
+    logout)
+        i3-msg exit ;;
+    reboot)
+        systemctl reboot ;;
+    shutdown)
+        systemctl poweroff ;;
+esac
