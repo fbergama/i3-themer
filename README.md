@@ -30,8 +30,6 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 
     # apt-get install dunst i3 i3lock polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode scrot imagemagick
 
-<p>You can download the remaining dependencies for Debian <a href="https://github.com/cizordj/i3-themer/blob/master/assets/debian_dependencies/">here</a></p>
-
 <p>FreeBSD</p>
 
     # pkg install bash i3 i3lock dunst polybar nitrogen rofi xdg-utils rxvt-unicode font-awesome firacode scrot imagemagick7 mixertui
