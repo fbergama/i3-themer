@@ -24,15 +24,15 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <P>The i3 themer relies on a couple of dependencies to work nicely.</p>
 <p>Fedora</p>
     
-    # dnf install dunst i3 i3lock polybar nitrogen rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode fira-code-fonts scrot imagemagick
+    # dnf install dunst i3 i3lock polybar xwallpaper rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode fira-code-fonts scrot imagemagick
     
 <p>Debian</p>
 
-    # apt-get install dunst i3 i3lock polybar nitrogen rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode scrot imagemagick
+    # apt-get install dunst i3 i3lock polybar xwallpaper rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode scrot imagemagick
 
 <p>FreeBSD</p>
 
-    # pkg install bash i3 i3lock dunst polybar nitrogen rofi xdg-utils rxvt-unicode font-awesome firacode scrot imagemagick7 mixertui
+    # pkg install bash i3 i3lock dunst polybar xwallpaper rofi xdg-utils rxvt-unicode font-awesome firacode scrot imagemagick7 mixertui
 
 <h2>How to apply themes</h2>
 <ul>

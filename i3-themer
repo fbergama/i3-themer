@@ -7,7 +7,6 @@ cd "$(dirname "$0")"
 
 CONFIG_PATH['i3']="$XDG_CONFIG_HOME/i3/config"
 CONFIG_PATH['dunst']="$XDG_CONFIG_HOME/dunst/dunstrc"
-CONFIG_PATH['nitrogen']="$XDG_CONFIG_HOME/nitrogen/bg-saved.cfg"
 CONFIG_PATH['polybar']="$XDG_CONFIG_HOME/polybar/config"
 CONFIG_PATH['xresources']="$XDG_CONFIG_HOME/../.Xresources"
 
@@ -53,10 +52,10 @@ function listThemes(){
 }
 function restoreDefaults(){
    rm "${CONFIG_PATH[@]}" "$XDG_CONFIG_HOME/polybar/i3wmthemer_bar_launch.sh"
-   rm "$XDG_CONFIG_HOME/nitrogen/"*
+   rm "$XDG_CONFIG_HOME/xwallpaper/"*
    rmdir "$XDG_CONFIG_HOME/i3"
    rmdir "$XDG_CONFIG_HOME/polybar"
-   rmdir "$XDG_CONFIG_HOME/nitrogen"
+   rmdir "$XDG_CONFIG_HOME/xwallpaper"
    rmdir "$XDG_CONFIG_HOME/dunst"
    cat << EOF
 i3-themer successfully removed! You may want to remove the dependencies manually.
@@ -78,13 +77,13 @@ function touchConfigFiles(){
     mkdir -p "$XDG_CONFIG_HOME"
     mkdir -p "$XDG_CONFIG_HOME/i3"
     mkdir -p "$XDG_CONFIG_HOME/polybar"
-    mkdir -p "$XDG_CONFIG_HOME/nitrogen"
     mkdir -p "$XDG_CONFIG_HOME/dunst"
+    mkdir -p "$XDG_CONFIG_HOME/xwallpaper"
     touch "${CONFIG_PATH[@]}"
 }
 
 function copyWallpapers(){
-    cp assets/wallpapers/* "$XDG_CONFIG_HOME/nitrogen/"
+    cp assets/wallpapers/* "$XDG_CONFIG_HOME/xwallpaper/"
 }
 function copyPolybarLauncher(){
     cp assets/scripts/i3wmthemer_bar_launch.sh "$XDG_CONFIG_HOME/polybar/"
@@ -97,7 +96,7 @@ function restartApps(){
     pkill dunst
     xrdb "${CONFIG_PATH['xresources']}"
     i3 restart
-    nitrogen --restore
+    xwallpaper --daemon --zoom "$XDG_CONFIG_HOME/xwallpaper/$wallpaper"
     notify-send "Theme applied successfully!"
 }
 
@@ -145,7 +144,6 @@ done
 
 dunstConfig > "${CONFIG_PATH['dunst']}"
 i3config > "${CONFIG_PATH['i3']}"
-nitrogenConfig > "${CONFIG_PATH['nitrogen']}"
 polybarConfig > "${CONFIG_PATH['polybar']}"
 xresourcesConfig > "${CONFIG_PATH['xresources']}"
 
