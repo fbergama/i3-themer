@@ -59,6 +59,8 @@ function restoreDefaults(){
    rmdir "$XDG_CONFIG_HOME/dunst"
    cat << EOF
 i3-themer successfully removed! You may want to remove the dependencies manually.
+Check the README for more details.
+
 Type 'i3-msg restart' to go back to defaults.
 
 Have a great day!
