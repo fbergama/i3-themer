@@ -96,7 +96,6 @@ function restartApps(){
     pkill dunst
     xrdb "${CONFIG_PATH['xresources']}"
     i3 restart
-    xwallpaper --daemon --zoom "$XDG_CONFIG_HOME/xwallpaper/$wallpaper"
     notify-send "Theme applied successfully!"
 }
 

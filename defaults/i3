@@ -225,7 +225,7 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id xwallpaper --daemon --zoom $XDG_CONFIG_HOME/xwallpaper/$wallpaper
+exec_always --no-startup-id xwallpaper --daemon --zoom $XDG_CONFIG_HOME/xwallpaper/$wallpaper
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
