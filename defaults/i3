@@ -226,9 +226,9 @@ mode "resize" {
 
 # Autostart applications
 exec_always --no-startup-id xwallpaper --daemon --zoom $XDG_CONFIG_HOME/xwallpaper/$wallpaper
-exec --no-startup-id compton -b
-exec --no-startup-id nm-applet
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+exec --no-startup-id xautolock -time 5 -locker '$HOME/.local/bin/i3-exit lock'
+exec --no-startup-id compton -b
 
 # Theme colors
 client.focused          ${i3wm['client.focused']}
