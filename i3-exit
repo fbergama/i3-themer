@@ -20,9 +20,11 @@ case "$1" in
     logout)
         i3-msg exit ;;
     reboot)
-        systemctl reboot ;;
+        systemctl reboot || doas /sbin/reboot 
+        ;;
     shutdown)
-        systemctl poweroff ;;
+        systemctl poweroff || doas /sbin/poweroff
+        ;;
     *)
         printHelp ;;
 esac
