@@ -92,7 +92,7 @@ function copyPolybarLauncher(){
 }
 function copyUtilities(){
     mkdir -p "$HOME/.local/bin"
-    cp "$PWD/i3-scrot" "$PWD/i3-exit" "$HOME/.local/bin"
+    cp "$PWD/i3-exit" "$HOME/.local/bin"
 }
 function restartApps(){
     pkill dunst

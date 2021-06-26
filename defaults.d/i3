@@ -3,15 +3,6 @@
 # This file will be merged to the end of i3 config
 # and will be ignored by git
 
-function detectAudioMixer(){
-    if type "alsamixer" >/dev/null 2>/dev/null
-    then
-        echo "alsamixer"
-    else
-        echo "mixertui"
-    fi
-}
-
 function i3config(){
 local mod='$mod'
 local mode_gaps='$mode_gaps'
@@ -28,10 +19,8 @@ cat << EOF
 focus_follows_mouse no
 
 # User defined keys
-bindsym Print exec i3-scrot -d
-bindsym Shift+Print exec i3-scrot -s
-bindsym Mod1+Sys_Req exec i3-scrot -w
-bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e $(detectAudioMixer)
+bindsym Print exec flameshot gui
+bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e alsamixer
 bindsym $mod+F2 exec --no-startup-id sensible-browser
 bindsym $mod+F3 exec --no-startup-id i3-sensible-terminal -e ranger
 bindsym $mod+F4 exec --no-startup-id xcalc
@@ -39,6 +28,7 @@ bindsym $mod+F5 exec --no-startup-id i3-sensible-terminal -e cmus
 bindsym $mod+F6 exec --no-startup-id i3-sensible-terminal -e neomutt
 
 ## Gaps
+## Uncomment this if you use i3-gaps
 #gaps inner 10
 #gaps outer -4
 #smart_gaps on
