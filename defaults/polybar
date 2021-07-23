@@ -113,17 +113,17 @@ menu-0-2 = log off
 menu-0-2-exec = menu-open-3
 
 menu-1-0 = reboot
-menu-1-0-exec = i3-exit reboot
+menu-1-0-exec = doas /sbin/reboot
 menu-1-1 = get back
 menu-1-1-exec = menu-open-0
 
 menu-2-0 = power off
-menu-2-0-exec = i3-exit shutdown
+menu-2-0-exec = doas /sbin/poweroff
 menu-2-1 = get back
 menu-2-1-exec = menu-open-0
 
 menu-3-0 = log off
-menu-3-0-exec = i3-exit logout
+menu-3-0-exec = i3-msg exit
 menu-3-1 = get back
 menu-3-1-exec = menu-open-0
 

@@ -22,13 +22,9 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <h1>What you will need</h1>
 
 <P>The i3 themer relies on a couple of dependencies to work nicely.</p>
-<p>Fedora</p>
-    
-    # dnf install dunst i3 i3lock polybar xwallpaper rofi bash fontawesome-fonts sensible-utils xdg-utils alsa-utils rxvt-unicode fira-code-fonts flameshot imagemagick xautolock
-    
 <p>Debian</p>
 
-    # apt-get install dunst i3 i3lock polybar xwallpaper rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode flameshot imagemagick xautolock
+    # apt-get install dunst i3 i3lock-fancy polybar xwallpaper rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode flameshot xautolock
 
 <h2>How to apply themes</h2>
 <ul>
@@ -67,4 +63,5 @@ click <a href="https://github.com/cizordj/i3wm-themer/tree/master/assets/templat
 </ul>
 
 <h2>Guidelines</h2>
-Users can add their own static configuration in the default.d/ directory, all the files in that place will be concatenated with the template files.
+Users can add their own static configuration in the default.d/ directory, all
+the files in that place will be concatenated with the template files.
