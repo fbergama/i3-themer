@@ -24,7 +24,7 @@ Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3w
 <P>The i3 themer relies on a couple of dependencies to work nicely.</p>
 <p>Debian</p>
 
-    # apt-get install dunst i3 i3lock-fancy polybar xwallpaper rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode flameshot xautolock
+    # apt-get install dunst i3 i3lock-fancy polybar xwallpaper rofi bash fonts-font-awesome xdg-utils sensible-utils alsa-utils rxvt-unicode fonts-firacode flameshot xautolock numlockx
 
 <h2>How to apply themes</h2>
 <ul>

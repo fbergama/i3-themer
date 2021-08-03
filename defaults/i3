@@ -224,6 +224,7 @@ mode "resize" {
 # Autostart applications
 exec_always --no-startup-id xwallpaper --daemon --zoom $XDG_CONFIG_HOME/xwallpaper/$wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+exec_always --no-startup-id numlockx on
 exec --no-startup-id xautolock -time 5 -locker 'i3lock-fancy -p'
 exec --no-startup-id picom
 
