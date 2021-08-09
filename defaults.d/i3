@@ -20,6 +20,7 @@ focus_follows_mouse no
 
 # User defined keys
 bindsym Print exec flameshot gui
+bindsym Shift+Print exec flameshot gui
 bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e alsamixer
 bindsym $mod+F2 exec --no-startup-id sensible-browser
 bindsym $mod+F3 exec --no-startup-id i3-sensible-terminal -e vifm
