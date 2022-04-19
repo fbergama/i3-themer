@@ -7,6 +7,9 @@
 <ul>
 Personal collection of themes and scripts for <a href="https://www.i3wm.org">i3wm</a>.
 
+FORKED from cizordj/i3-themer
+
+
 ![](assets/screenshots/workflow.gif?raw=true)
 </ul>
 
