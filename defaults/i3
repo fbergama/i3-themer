@@ -13,7 +13,7 @@ local mode_system='$mode_system'
 local HOME='$HOME'
 
 cat << EOF
-set $mod Mod4
+set $mod Mod1
 
 new_window pixel 2
 new_float pixel 2
@@ -224,9 +224,9 @@ mode "resize" {
 
 # Autostart applications
 exec_always --no-startup-id xwallpaper --daemon --zoom $XDG_CONFIG_HOME/xwallpaper/$wallpaper
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 exec_always --no-startup-id numlockx on
-exec xset r rate 200 40
+exec xset r off
 exec --no-startup-id xautolock -time 5 -locker 'i3lock-fancy -p'
 exec --no-startup-id picom
 
